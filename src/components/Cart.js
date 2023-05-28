@@ -3,7 +3,15 @@ import { useGlobalContext } from './Context/Context';
 import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 
 export const Cart = ({ id, name, price, image, amount }) => {
-  const { remove, increase, decrease } = useGlobalContext();
+  const { cart, setCart, increase, decrease } = useGlobalContext();
+
+  const remove = () => {
+    const newCart = cart.filter((item) => item.id !== id);
+
+    setCart(newCart);
+    localStorage.setItem('data', cart);
+  };
+
   return (
     <article className="flex sm:border-[1px] w-[100%] justify-around items-center">
       <img src={image} alt={name} className="w-50 h-50 max-w-md" />
@@ -21,7 +29,7 @@ export const Cart = ({ id, name, price, image, amount }) => {
         <div className="w-full flex align-center justify-center font-bold">
           <button
             className=" ml-4 text-sm mb-3 p-1 rounded mt-1 hover:scale-95 text-blue-500"
-            onClick={() => console.log('remove')}
+            onClick={() => remove(id)}
           >
             remove
           </button>

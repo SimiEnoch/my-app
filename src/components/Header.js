@@ -2,9 +2,10 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import React, { useState } from 'react';
 import { useGlobalContext } from './Context/Context';
+import { Link } from 'react-router-dom';
 
 function Header() {
-  const { amount } = useGlobalContext();
+  const { cart } = useGlobalContext();
   const [hamburger, setHamburger] = useState(false);
 
   const buttonHandler = () => {
@@ -20,14 +21,14 @@ function Header() {
       <h1 className="text-xl font-bold">CARSONS</h1>
       <div className="hover:text-yellow-500">
         <li className="text-slate-800 duration-500  hover:text-yellow-500 mb-4 md:order-5 order-none relative">
-          <a href="/Cart">
+          <Link to="/cart">
             <BsFillCartCheckFill />
             <div className="object-top object-cover bg-slate-800 left-[8px]  absolute top-[11px]  rounded-[50%] p-0">
               <p className=" text-white rounded-[50%] text-[14.5px] hover:text-yellow-500 font-bold px-[1.8px]">
-                {amount}
+                {cart.length}
               </p>
             </div>
-          </a>
+          </Link>
         </li>
       </div>
       <nav

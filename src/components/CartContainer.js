@@ -2,6 +2,8 @@ import React from 'react';
 import Cart from './Cart';
 import { useGlobalContext } from './Context/Context';
 import { BsFillCartCheckFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import Header from './Header';
 
 const CartContainer = ({ cartContainer }) => {
   const { amount } = useGlobalContext();
@@ -29,12 +31,12 @@ const CartContainer = ({ cartContainer }) => {
           <h4 className="pt-3">is currently empty...</h4>
         </header>
         <div className="flex items-center justify-center pt-3">
-          <a
-            href="/"
+          <Link
+            to="/"
             className=" text-green-800 text-center p-2 rounded"
           >
             Back to home page ?
-          </a>
+          </Link>
         </div>
       </section>
     );
@@ -42,6 +44,7 @@ const CartContainer = ({ cartContainer }) => {
 
   return (
     <section className="cart">
+      <Header />
       <header className="">
         <h2 className="mt-20 text-center font-bold text-2xl mb-3 hover:underline">
           YOUR CART
@@ -56,7 +59,17 @@ const CartContainer = ({ cartContainer }) => {
         <hr className="w-full mt-10 text-black" />
         <div className="text-black text-center mt-2 mb-2 font-bold gap-20 text-2xl">
           <h4>
-            Total Amount<span> = ${total}</span>
+            Total Amount
+            <span>
+              = $
+              {cart
+                .map((item) => item.price)
+                .reduce(
+                  (accumulator, currentValue) =>
+                    accumulator + currentValue,
+                  0
+                )}
+            </span>
           </h4>
         </div>
         <div className="flex justify-center items-center mb-5">

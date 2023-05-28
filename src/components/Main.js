@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Home from './Home';
 import { Footer } from './Footer';
+import { useGlobalContext } from './Context/Context';
 
 function Main() {
   const [loading, setLoading] = useState(true);
+  const { cart, setCart } = useGlobalContext();
 
   useEffect(() => {
     setLoading(true);
@@ -22,7 +24,7 @@ function Main() {
       {loading ? (
         <span class="loader"></span>
       ) : (
-        <div className="max-w-screen-xl">
+        <div className="max-w-screen-xl ">
           <div id="home">
             <Header />
           </div>

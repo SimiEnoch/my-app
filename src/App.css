@@ -80,7 +80,7 @@
   .section-center {
     display: grid;
     width: auto;
-    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
   }
 }
