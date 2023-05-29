@@ -7,7 +7,7 @@ import Header from './Header';
 
 const CartContainer = ({ cartContainer }) => {
   const { amount } = useGlobalContext();
-  const { cart, total, clearCart } = useGlobalContext();
+  const { cart, clearCart } = useGlobalContext();
   if (cart.length === 0) {
     return (
       <section className="">

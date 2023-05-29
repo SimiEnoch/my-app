@@ -11,7 +11,7 @@ console.log(allCategories);
 
 function Home() {
   const [products, setProducts] = useState(Data);
-  const [categories, setCategories] = useState(allCategories);
+  const [categories] = useState(allCategories);
 
   const filterItems = (category) => {
     if (category === 'All') {

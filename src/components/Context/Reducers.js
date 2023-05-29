@@ -49,18 +49,5 @@ export const cartReducer = (state, action) => {
     total = parseFloat(total.toFixed(2));
     return { ...state, total, amount };
   }
-  switch (action.type) {
-    case 'ADD_TO_CART':
-      return {
-        ...state,
-        cart: [...state.cart, { ...action.payload, amount: 1 }],
-      };
-    case 'REMOVE_FROM_CART':
-      return {
-        ...state,
-        cart: state.cart.filter((c) => c.id !== action.payload.id),
-      };
-  }
-
   return state;
 };

@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import Home from './Home';
 import { Footer } from './Footer';
-import { useGlobalContext } from './Context/Context';
 
 function Main() {
   const [loading, setLoading] = useState(true);
-  const { cart, setCart } = useGlobalContext();
 
   useEffect(() => {
     setLoading(true);

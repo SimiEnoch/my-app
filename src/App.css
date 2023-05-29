@@ -86,7 +86,6 @@
 }
 @media screen and (max-width: 1200px) {
   .section-center {
-    margin: 4rem 4rem;
     justify-content: center;
     align-items: center;
   }

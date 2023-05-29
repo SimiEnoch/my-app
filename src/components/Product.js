@@ -1,6 +1,5 @@
 import React from 'react';
 import { useGlobalContext } from './Context/Context';
-import { BsFillCartCheckFill } from 'react-icons/bs';
 
 export const Product = ({ Data }) => {
   // const { addToCart } = useGlobalContext();
