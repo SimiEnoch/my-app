@@ -1,5 +1,6 @@
-import React from "react";
-import { useGlobalContext } from "./Context/Context";
+import React from 'react';
+import { useGlobalContext } from './Context/Context';
+import { BsFillCartCheckFill } from 'react-icons/bs';
 
 export const Product = ({ Data }) => {
   // const { addToCart } = useGlobalContext();
@@ -49,7 +50,9 @@ export const Product = ({ Data }) => {
                     {name}
                   </h4>
                   <div className="flex align-center justify-center font-bold">
-                    <h4 className=" text-lg mb-3 p-1 rounded mt-1">${price}</h4>
+                    <h4 className=" text-lg mb-3 p-1 rounded mt-1">
+                      ${price}
+                    </h4>
                   </div>
                 </header>
                 <div className="w-full flex align-center justify-center font-bold">
@@ -58,6 +61,28 @@ export const Product = ({ Data }) => {
                     onClick={() => {
                       console.log(cart);
                       addToCart(dataItem);
+                      // <div className="flex min-h-screen items-center justify-center bg-gray-200">
+                      //   <div className="flex flex-col gap-5">
+                      //     <div className="max-w-lg rounded bg-green-700 tet-green-700 overflow-hidden shadow-md shadow-green-500/20">
+                      //       <div class="flex">
+                      //         <div className="flex items-center gap-4 p-4">
+                      //           <div className="shrink-0">
+                      //             <BsFillCartCheckFill />
+                      //           </div>
+                      //           <div className="space-y-1">
+                      //             <p className="font-bold capitalize">
+                      //               Success Title Goes Wrong
+                      //             </p>
+                      //             <p className="text-sm">
+                      //               Item successfully added to cart
+                      //             </p>
+                      //           </div>
+                      //           <a href="#">Ok</a>
+                      //         </div>
+                      //       </div>
+                      //     </div>
+                      //   </div>
+                      // </div>;
                     }}
                   >
                     Order!

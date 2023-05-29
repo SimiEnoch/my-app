@@ -27,11 +27,11 @@ function Home() {
 
   return (
     <main>
-      <div className="h-[75vh] bg-slate-950 sm:h-[70vh] ">
-        <h1 className="text-white text-6xl sm:text-5xl absolute font-bold w-100 left-8 bottom-96">
+      <div className="h-[75vh] bg-slate-950 sm:h-[70vh]">
+        <h1 className="text-white text-6xl sm:text-5xl absolute font-bold w-100 bottom-1/2 left-8">
           SEASON ARRIVALS
         </h1>
-        <p className="text-white text-3xl sm:text-2xl absolute font-light w-100 left-8 bottom-80 mb-4 sm:mb-3">
+        <p className="text-white text-3xl sm:text-2xl absolute font-light w-100 mb-4 bottom-[43%] md:mb-3 left-8">
           ALL THE TRENDS
         </p>
       </div>

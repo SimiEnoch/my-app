@@ -1,6 +1,6 @@
-import React from "react";
-import { useGlobalContext } from "./Context/Context";
-import { HiChevronDown, HiChevronUp } from "react-icons/hi";
+import React from 'react';
+import { useGlobalContext } from './Context/Context';
+import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 
 export const Cart = ({ id, mainId, name, price, image, amount }) => {
   const { cart, setCart } = useGlobalContext();
@@ -91,7 +91,7 @@ export const Cart = ({ id, mainId, name, price, image, amount }) => {
             <HiChevronDown />
           </button>
         </div>
-        <p className="text-center">{amount}</p>
+        <p className="text-center"> Quantity: {amount}</p>
       </div>
     </article>
   );
