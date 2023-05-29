@@ -1,9 +1,9 @@
-import React from 'react';
-import Cart from './Cart';
-import { useGlobalContext } from './Context/Context';
-import { BsFillCartCheckFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
-import Header from './Header';
+import React from "react";
+import Cart from "./Cart";
+import { useGlobalContext } from "./Context/Context";
+import { BsFillCartCheckFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const CartContainer = ({ cartContainer }) => {
   const { amount } = useGlobalContext();
@@ -31,10 +31,7 @@ const CartContainer = ({ cartContainer }) => {
           <h4 className="pt-3">is currently empty...</h4>
         </header>
         <div className="flex items-center justify-center pt-3">
-          <Link
-            to="/"
-            className=" text-green-800 text-center p-2 rounded"
-          >
+          <Link to="/" className=" text-green-800 text-center p-2 rounded">
             Back to home page ?
           </Link>
         </div>
@@ -63,10 +60,9 @@ const CartContainer = ({ cartContainer }) => {
             <span>
               = $
               {cart
-                .map((item) => item.price)
+                .map((item) => item.price * item.amount)
                 .reduce(
-                  (accumulator, currentValue) =>
-                    accumulator + currentValue,
+                  (accumulator, currentValue) => accumulator + currentValue,
                   0
                 )}
             </span>
