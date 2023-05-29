@@ -1,15 +1,34 @@
-import React from 'react';
-import { useGlobalContext } from './Context/Context';
+import React from "react";
+import { useGlobalContext } from "./Context/Context";
 
 export const Product = ({ Data }) => {
   // const { addToCart } = useGlobalContext();
   const { setCart, cart } = useGlobalContext();
 
   const addToCart = (dataItem) => {
-    setCart((prev) => {
-      return [...prev, { ...dataItem, id: prev.length + 1 }];
+    //Get the exact index of item, note that if index = -1, it means the item doesn't exist so it just adds it to the cart direct.
+    const index = cart.findIndex((object) => {
+      return object.id === dataItem.id;
     });
-    localStorage.setItem('data', cart);
+
+    // increase the amount by 1 everytime the user clicks the button if the item exists
+
+    if (index !== -1) {
+      setCart((prev) => {
+        const newCart = [...prev];
+        newCart[index] = {
+          ...newCart[index],
+          amount: newCart[index].amount + 1,
+        };
+        return newCart;
+      });
+      return;
+    }
+
+    setCart((prev) => {
+      return [...prev, { ...dataItem, mainId: prev.length + 1 }];
+    });
+    // localStorage.setItem('data', cart);
   };
 
   return (
@@ -30,9 +49,7 @@ export const Product = ({ Data }) => {
                     {name}
                   </h4>
                   <div className="flex align-center justify-center font-bold">
-                    <h4 className=" text-lg mb-3 p-1 rounded mt-1">
-                      ${price}
-                    </h4>
+                    <h4 className=" text-lg mb-3 p-1 rounded mt-1">${price}</h4>
                   </div>
                 </header>
                 <div className="w-full flex align-center justify-center font-bold">
