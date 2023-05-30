@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <main>
-      <div className="h-[75vh] bg-slate-950 sm:h-[70vh]">
+      <div className="h-[75vh] bg-slate-950 sm:h-[70vh] w-[100%] m-0">
         <h1 className="text-white text-6xl sm:text-5xl absolute font-bold w-100 bottom-1/2 left-8">
           SEASON ARRIVALS
         </h1>
