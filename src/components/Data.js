@@ -46,6 +46,7 @@ export const Data = [
     name: 'MENS T-SHIRT',
     category: 'Men Clothing',
     price: 100,
+    oldPrice: 300,
     amount: 1,
   },
   {
@@ -54,6 +55,7 @@ export const Data = [
     name: 'VERSACE SKIRT',
     category: 'Women Clothing',
     price: 130,
+    oldPrice: 350,
     amount: 1,
   },
   {
@@ -62,6 +64,7 @@ export const Data = [
     name: 'VISION 49" INCH FULL LED TV',
     category: 'Electronics',
     price: 1000,
+    oldPrice: 2000,
     amount: 1,
   },
   {
@@ -70,6 +73,7 @@ export const Data = [
     name: 'HAND MADE ICEBOX NECKLACE',
     category: 'Jewelrey',
     price: 1900,
+    oldPrice: 3000,
     amount: 1,
   },
 
@@ -79,6 +83,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'FULLY PACKED WHITE T-SHIRT',
     price: 150,
+    oldPrice: 250,
     amount: 1,
   },
   {
@@ -87,6 +92,7 @@ export const Data = [
     name: 'WOMENS FLAY SKIRT',
     category: 'Women Clothing',
     price: 200,
+    oldPrice: 400,
     amount: 1,
   },
 
@@ -96,6 +102,7 @@ export const Data = [
     name: 'SAMSUNG PRESSING IRON',
     category: 'Electronics',
     price: 500,
+    oldPrice: 700,
     amount: 1,
   },
   {
@@ -104,6 +111,7 @@ export const Data = [
     name: 'WOMENS RING SET',
     category: 'Jewelrey',
     price: 40,
+    oldPrice: 100,
     amount: 1,
   },
 
@@ -113,6 +121,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'LOUIS VUITTON FIT',
     price: 800,
+    oldPrice: 1000,
     amount: 1,
   },
   {
@@ -121,6 +130,7 @@ export const Data = [
     name: 'WOMEN OFFICE SKIRT',
     category: 'Women Clothing',
     price: 80,
+    oldPrice: 120,
     amount: 1,
   },
 
@@ -130,6 +140,7 @@ export const Data = [
     name: 'HUAWEI 42" INCH FULL LED TV',
     category: 'Electronics',
     price: 700,
+    oldPrice: 900,
     amount: 1,
   },
   {
@@ -138,6 +149,7 @@ export const Data = [
     name: 'BEAUTIFUL SET OF RINGS',
     category: 'Jewelrey',
     price: 100,
+    oldPrice: 150,
     amount: 1,
   },
   {
@@ -146,6 +158,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'AFRICAN SENATOR ATTIRE',
     price: 180,
+    oldPrice: 300,
     amount: 1,
   },
   {
@@ -154,6 +167,7 @@ export const Data = [
     name: 'SEXY MINI SKIRT',
     category: 'Women Clothing',
     price: 90,
+    oldPrice: 180,
     amount: 1,
   },
   {
@@ -162,6 +176,7 @@ export const Data = [
     name: 'PRESSING IRON ',
     category: 'Electronics',
     price: 500,
+    oldPrice: 800,
     amount: 1,
   },
 
@@ -171,6 +186,7 @@ export const Data = [
     name: 'DIAMOND RING',
     category: 'Jewelrey',
     price: 40000,
+    oldPrice: 50000,
     amount: 1,
   },
 
@@ -180,6 +196,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'DIOR FULL OUTFIT',
     price: 3000,
+    oldPrice: 30000,
     amount: 1,
   },
   {
@@ -188,6 +205,7 @@ export const Data = [
     name: 'FULL LENGTH SKIRT',
     category: 'Women Clothing',
     price: 150,
+    oldPrice: 220,
     amount: 1,
   },
 
@@ -197,6 +215,7 @@ export const Data = [
     name: 'LENOVO ELECTRONIC WASHING MACHINE',
     category: 'Electronics',
     price: 1300,
+    oldPrice: 2000,
     amount: 1,
   },
 
@@ -206,6 +225,7 @@ export const Data = [
     name: '24 KARAT GOLD CHAIN',
     category: 'Jewelrey',
     price: 30000,
+    oldPrice: 32000,
     amount: 1,
   },
   {
@@ -214,6 +234,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'BALENCIAGA T-SHIRT',
     price: 400,
+    oldPrice: 700,
     amount: 1,
   },
   {
@@ -222,6 +243,7 @@ export const Data = [
     name: 'FEMALE CASUAL SKIRT',
     category: 'Women Clothing',
     price: 330,
+    oldPrice: 800,
     amount: 1,
   },
 
@@ -231,6 +253,7 @@ export const Data = [
     name: ' 24 HOURS WASHING MACHINE',
     category: 'Electronics',
     price: 950,
+    oldPrice: 1000,
     amount: 1,
   },
 
@@ -240,6 +263,7 @@ export const Data = [
     name: 'ICEBOX SILVER CHAIN',
     category: 'Jewelrey',
     price: 20000,
+    oldPrice: 25000,
     amount: 1,
   },
   {
@@ -248,6 +272,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'HIGH FASHION SWEATSHIRT',
     price: 1000,
+    oldPrice: 2000,
     amount: 1,
   },
   {
@@ -256,6 +281,7 @@ export const Data = [
     name: 'FEMALE CHILDREN SKIRT',
     category: 'Women Clothing',
     price: 25,
+    oldPrice: 50,
     amount: 1,
   },
 
@@ -265,6 +291,7 @@ export const Data = [
     name: '40 INCH DISPLAY HP TELEVISION',
     category: 'Electronics',
     price: 750,
+    oldPrice: 1000,
     amount: 1,
   },
 
@@ -274,6 +301,7 @@ export const Data = [
     name: 'UNISEX ICEBOX NECKLACE',
     category: 'Jewelrey',
     price: 4000,
+    oldPrice: 5000,
     amount: 1,
   },
   {
@@ -282,6 +310,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'UNISEX JEAN JACKET',
     price: 360,
+    oldPrice: 500,
     amount: 1,
   },
   {
@@ -290,6 +319,7 @@ export const Data = [
     name: 'FULLY MADE FEMALE OUTFIT',
     category: 'Women Clothing',
     price: 300,
+    oldPrice: 500,
     amount: 1,
   },
 
@@ -299,6 +329,7 @@ export const Data = [
     name: 'THERMOCOOL WASHING MACHINE',
     category: 'Electronics',
     price: 1200,
+    oldPrice: 2500,
     amount: 1,
   },
 
@@ -308,6 +339,7 @@ export const Data = [
     name: 'FEMALE NECKLACE',
     category: 'Jewelrey',
     price: 600,
+    oldPrice: 700,
     amount: 1,
   },
   {
@@ -316,6 +348,7 @@ export const Data = [
     category: 'Men Clothing',
     name: 'GHOST IMPAIRED T-SHIRT',
     price: 100,
+    oldPrice: 250,
     amount: 1,
   },
   {
@@ -324,6 +357,7 @@ export const Data = [
     name: 'WOMENS DESIGNER SKIRT',
     category: 'Women Clothing',
     price: 200,
+    oldPrice: 350,
     amount: 1,
   },
 
@@ -333,6 +367,7 @@ export const Data = [
     name: 'SAMSUNG AIR CONDITIONER',
     category: 'Electronics',
     price: 1300,
+    oldPrice: 2300,
     amount: 1,
   },
   {
@@ -341,6 +376,7 @@ export const Data = [
     name: 'UNISEX BANGLES',
     category: 'Jewelrey',
     price: 500,
+    oldPrice: 700,
     amount: 1,
   },
   {
@@ -349,6 +385,7 @@ export const Data = [
     name: 'VINTAGE SHIRT',
     category: 'Men Clothing',
     price: 5000,
+    oldPrice: 7000,
     amount: 1,
   },
   {
@@ -357,14 +394,16 @@ export const Data = [
     name: 'WOMENS NICE GOWN',
     category: 'Women Clothing',
     price: 1000,
+    oldPrice: 3000,
     amount: 1,
   },
   {
     id: 39,
     image: Electronic10,
-    name: 'NIGERIAN-MADE AIR CONDITIONER',
+    name: 'CHINA-MADE AIR CONDITIONER',
     category: 'Electronics',
     price: 1800,
+    oldPrice: 2000,
     amount: 1,
   },
   {
@@ -373,6 +412,7 @@ export const Data = [
     name: 'UNISEX BANGLES',
     category: 'Jewelrey',
     price: 200,
+    oldPrice: 300,
     amount: 1,
   },
 ];

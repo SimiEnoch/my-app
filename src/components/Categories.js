@@ -1,6 +1,6 @@
 export const Categories = ({ categories, filterItems }) => {
   return (
-    <div className="flex space-x-2 justify-center align-center">
+    <div className="flex space-x-1 justify-center align-center">
       {categories.map((category, index) => {
         return (
           <button

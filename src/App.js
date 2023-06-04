@@ -8,17 +8,9 @@ import {
   Route,
 } from 'react-router-dom';
 import { useGlobalContext } from './components/Context/Context';
-
+import { SignUp } from './components/SignUp';
 function App() {
   const { cart } = useGlobalContext();
-
-  // useEffect(() => {
-  //   const cart2 = localStorage.getItem('data');
-
-  //   if (cart2) {
-  //     setCart(cart2);
-  //   }
-  // }, [cart]);
 
   return (
     <Router>
@@ -28,6 +20,7 @@ function App() {
           path="cart"
           element={<CartContainer cartContainer={cart} />}
         />
+        <Route path="sign-up" element={<SignUp />} />
       </Routes>
     </Router>
   );

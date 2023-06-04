@@ -7,7 +7,10 @@ export const Footer = () => {
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <div className="md:h-[72vh] bg-slate-800 h-[100%]" id="about">
+    <div
+      className="md:h-[72vh] bg-slate-800 h-[100%] mt-36"
+      id="about"
+    >
       <h1
         className="
        flex justify-center align-center text-white text-3xl sm:text-3xl font-light pt-12"

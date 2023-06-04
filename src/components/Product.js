@@ -32,38 +32,42 @@ export const Product = ({ Data }) => {
   };
 
   return (
-    <div className="px-14">
-      <div className="section-center ">
+    <div className="md:px-10 px-4 mx-5">
+      <div className="section-center">
         {Data.map((dataItem, index) => {
-          const { name, image, price } = dataItem;
+          const { name, image, price, oldPrice } = dataItem;
           return (
             <article key={index} className="menu-items sm:border-2">
               <img
                 src={image}
                 alt="img"
-                className="border-seperate object-cover h-80 w-full max-w-md"
+                className="border-seperate object-cover h-50 sm:h-80 w-full max-w-md"
               />
               <div className=" text-lg text-center">
                 <header className="mt-3">
-                  <h4 className="text-lg flex align-center justify-center">
+                  <h4 className="align-center text-[13px] font-bold flex align-center justify-center text-center font">
                     {name}
                   </h4>
-                  <div className="flex align-center justify-center font-bold">
-                    <h4 className=" text-lg mb-3 p-1 rounded mt-1">
-                      ${price}
-                    </h4>
-                  </div>
+                  <span>
+                    <div className="flex align-center justify-center font-bold gap-3">
+                      <h4 className="text-sm bg-slate-500 text-white border-2 mb-3 p-1 rounded mt-1">
+                        ${price}
+                      </h4>
+                      <h4 className="text-sm text-black border-2 mb-3 p-1 rounded mt-1 line-through">
+                        ${oldPrice}
+                      </h4>
+                    </div>
+                  </span>
                 </header>
                 <div className="w-full flex align-center justify-center font-bold">
                   <button
-                    className="button border-white text-md font-light hover:text-white text-black hover:text-xl hover:font-bold hover:bg-slate-800 mb-3 p-1 rounded mt-1"
+                    className="button border-2 border-black text-md font-light hover:text-white text-black hover:text-xl hover:font-bold hover:bg-slate-700  mb-3 p-1 rounded mt-1"
                     onClick={() => {
-                      console.log(cart);
                       addToCart(dataItem);
-                      alert('Item Ordered');
+                      alert('Item successfully added to cart');
                     }}
                   >
-                    Order!
+                    Add to Cart
                   </button>
                 </div>
               </div>

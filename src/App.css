@@ -66,16 +66,20 @@
   }
 }
 
-.button {
+.sss {
+  border: 1px solid dashed;
+  box-sizing: border-box;
+}
+.form-css {
+  box-sizing: border-box;
   border: 1px solid black;
 }
 @media screen and (min-width: 800px) {
   .section-center {
     display: flex;
-    margin: 2rem 2rem;
   }
   .menu-items {
-    border: 1px solid black;
+    border: 2px solid black;
   }
   .section-center {
     display: grid;
@@ -88,14 +92,17 @@
   .section-center {
     justify-content: center;
     align-items: center;
+    grid-template-columns: 1fr 1fr;
   }
   .menu-items {
+    width: 100%;
+    max-width: 100%;
     border: none;
+    border: 1px solid black;
   }
-
   .section-center {
     display: grid;
     width: auto;
-    grid-gap: 5px;
+    grid-gap: 15px;
   }
 }

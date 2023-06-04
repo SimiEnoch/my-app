@@ -8,6 +8,7 @@ import Header from './Header';
 const CartContainer = ({ cartContainer }) => {
   const { amount } = useGlobalContext();
   const { cart, clearCart } = useGlobalContext();
+
   if (cart.length === 0) {
     return (
       <section className="">
@@ -46,7 +47,7 @@ const CartContainer = ({ cartContainer }) => {
     <section className="cart">
       <Header />
       <header className="">
-        <h2 className="mt-20 text-center font-bold text-2xl mb-3 hover:underline">
+        <h2 className="mt-20  text-center font-bold text-2xl mb-3 hover:underline">
           YOUR CART
         </h2>
       </header>
@@ -74,11 +75,21 @@ const CartContainer = ({ cartContainer }) => {
         </div>
         <div className="flex justify-center items-center mb-5">
           <button
-            className=" bg-red-700 border-2 text-white p-2 rounded-lg hover:scale-100 text-2xl font-[700]"
+            className="bg-red-700 border-2 text-white p-2 rounded-lg hover:scale-100 text-xl font-[700]"
             onClick={clearCart}
           >
             Clear Cart
           </button>
+        </div>
+        <div className="flex justify-center items-center mb-5">
+          <span>
+            <Link
+              to="/"
+              className=" text-green-800 text-center p-2 rounded"
+            >
+              Back to home page ?
+            </Link>
+          </span>
         </div>
       </footer>
     </section>

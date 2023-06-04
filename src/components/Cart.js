@@ -1,8 +1,20 @@
 import React from 'react';
 import { useGlobalContext } from './Context/Context';
-import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
+import {
+  BsFillTrash3Fill,
+  BsFillPlusSquareFill,
+  BsFillFileMinusFill,
+} from 'react-icons/bs';
 
-export const Cart = ({ id, mainId, name, price, image, amount }) => {
+export const Cart = ({
+  id,
+  mainId,
+  name,
+  price,
+  image,
+  amount,
+  oldPrice,
+}) => {
   const { cart, setCart } = useGlobalContext();
 
   const increase = () => {
@@ -58,40 +70,50 @@ export const Cart = ({ id, mainId, name, price, image, amount }) => {
   };
 
   return (
-    <article className="flex sm:border-[1px] w-[100%] justify-around items-center">
-      <img src={image} alt={name} className="w-50 h-50 max-w-md" />
+    <article className=" flex sm:border-[1px] w-[100%] justify-around sm:px-1">
+      <img
+        src={image}
+        alt={name}
+        className="border-seperate object-cover h-30 sm:h-30 w-50 sm:w-[30%] w-full max-w-md"
+      />
       <div className="">
         <header className="mt-3">
           <h4 className="text-lg font-bold flex align-center justify-center text-center font">
             {name}
           </h4>
-          <div className="w-full flex align-center justify-center font-bold">
+          <div className="w-full flex align-center justify-center font-bold gap-2">
             <h4 className="text-sm  bg-slate-500 text-white border-2 mb-3 p-1 rounded mt-1">
               ${price}
             </h4>
+            <h4 className="text-[15px] text-black mb-3 p-1 rounded mt-1 line-through">
+              ${oldPrice}
+            </h4>
           </div>
         </header>
-        <div className="w-full flex align-center justify-center font-bold">
-          <button
-            className=" ml-4 text-sm mb-3 p-1 rounded mt-1 hover:scale-95 text-blue-500"
-            onClick={() => {
-              console.log(mainId);
-              remove();
-            }}
-          >
-            remove
-          </button>
-        </div>
+        <span className="w-full">
+          <div className="flex align-center justify-center font-bold">
+            <BsFillTrash3Fill className="text-red-700 text-[11px]" />
+            <button
+              className="text-[11px] mb-3 rounded hover:scale-95 text-red-500"
+              onClick={() => {
+                console.log(mainId);
+                remove();
+              }}
+            >
+              REMOVE
+            </button>
+          </div>
+        </span>
 
-        <div className="flex items-center justify-center">
-          <button className="" onClick={() => increase(id)}>
-            <HiChevronUp />
+        <span className="flex items-center justify-center gap-8">
+          <button className="p-2" onClick={() => decrease(id)}>
+            <BsFillFileMinusFill />
           </button>
-          <button className="" onClick={() => decrease(id)}>
-            <HiChevronDown />
+          <p className="text-center"> {amount}</p>
+          <button className="p-2" onClick={() => increase(id)}>
+            <BsFillPlusSquareFill />
           </button>
-        </div>
-        <p className="text-center"> Quantity: {amount}</p>
+        </span>
       </div>
     </article>
   );
