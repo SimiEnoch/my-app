@@ -65,7 +65,7 @@
     margin-top: 0;
   }
 }
-
+/* 
 .sss {
   border: 1px solid dashed;
   box-sizing: border-box;
@@ -73,13 +73,14 @@
 .form-css {
   box-sizing: border-box;
   border: 1px solid black;
-}
+} */
+
 @media screen and (min-width: 800px) {
   .section-center {
     display: flex;
   }
   .menu-items {
-    border: 2px solid black;
+    border: 1px solid grey;
   }
   .section-center {
     display: grid;
@@ -95,10 +96,7 @@
     grid-template-columns: 1fr 1fr;
   }
   .menu-items {
-    width: 100%;
-    max-width: 100%;
     border: none;
-    border: 1px solid black;
   }
   .section-center {
     display: grid;

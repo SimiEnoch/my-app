@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from './Context/Context';
+import Swal from 'sweetalert2';
 
 export const Product = ({ Data }) => {
   // const { addToCart } = useGlobalContext();
@@ -32,7 +33,7 @@ export const Product = ({ Data }) => {
   };
 
   return (
-    <div className="md:px-10 px-4 mx-5">
+    <div className="md:px-12 px-4 sm:mx-5 mx-1">
       <div className="section-center">
         {Data.map((dataItem, index) => {
           const { name, image, price, oldPrice } = dataItem;
@@ -64,7 +65,13 @@ export const Product = ({ Data }) => {
                     className="button border-2 border-black text-md font-light hover:text-white text-black hover:text-xl hover:font-bold hover:bg-slate-700  mb-3 p-1 rounded mt-1"
                     onClick={() => {
                       addToCart(dataItem);
-                      alert('Item successfully added to cart');
+                      Swal.fire({
+                        position: 'top',
+                        icon: 'success',
+                        text: 'Product successfully added to cart',
+                        showConfirmButton: false,
+                        timer: 2000,
+                      });
                     }}
                   >
                     Add to Cart
