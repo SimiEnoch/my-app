@@ -62,7 +62,7 @@ export const Product = ({ Data }) => {
                 </header>
                 <div className="w-full flex align-center justify-center font-bold">
                   <button
-                    className="button border-2 border-black text-md font-light hover:text-white text-black hover:text-xl hover:font-bold hover:bg-slate-700  mb-3 p-1 rounded mt-1"
+                    className="button  bg-slate-950 text-white css text-md font-light hover:text-white hover:text-xl hover:font-bold hover:bg-slate-700  mb-3 p-1 rounded mt-1"
                     onClick={() => {
                       addToCart(dataItem);
                       Swal.fire({
@@ -70,7 +70,7 @@ export const Product = ({ Data }) => {
                         icon: 'success',
                         text: 'Product successfully added to cart',
                         showConfirmButton: false,
-                        timer: 2000,
+                        timer: 1500,
                       });
                     }}
                   >
