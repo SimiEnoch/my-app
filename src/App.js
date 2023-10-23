@@ -8,7 +8,8 @@ import {
   Route,
 } from 'react-router-dom';
 import { useGlobalContext } from './components/Context/Context';
-import { SignUp } from './components/SignUp';
+import LoginForm from './components/authentication/LoginForm';
+
 function App() {
   const { cart } = useGlobalContext();
 
@@ -20,7 +21,7 @@ function App() {
           path="cart"
           element={<CartContainer cartContainer={cart} />}
         />
-        <Route path="sign-up" element={<SignUp />} />
+        <Route path="sign-up" element={<LoginForm />} />
       </Routes>
     </Router>
   );

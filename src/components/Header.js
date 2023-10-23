@@ -47,6 +47,13 @@ function Header() {
           <li className="hover:text-slate-800 duration-500">
             <a href="#about">About</a>
           </li>
+          <div className="hover:text-yellow-500">
+            <li className="text-slate-800 duration-500">
+              <Link to="/sign-up">
+                <button>Login</button>
+              </Link>
+            </li>
+          </div>
         </ul>
       </nav>
 
