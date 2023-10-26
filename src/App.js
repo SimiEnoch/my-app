@@ -10,6 +10,7 @@ import {
 import { useGlobalContext } from './components/Context/Context';
 import LoginForm from './components/authentication/LoginForm';
 
+
 function App() {
   const { cart } = useGlobalContext();
 

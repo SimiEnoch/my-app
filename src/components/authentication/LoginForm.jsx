@@ -1,21 +1,31 @@
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { useState } from 'react';
-import './Form.css';
-import backgroundImage from './backgroundImage.jpg';
-import { FcGoogle } from 'react-icons/fc';
-import { FaCheck } from 'react-icons/fa';
-import { AiOutlineMail } from 'react-icons/ai';
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useState } from "react";
+import "./Form.css";
+import backgroundImage from "./backgroundImage.jpg";
+import { FcGoogle } from "react-icons/fc";
+import { FaCheck } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { auth, provider } from "../config/Firebase";
+import { signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+
+  const signInWithGoogle = async () => {
+    const result = await signInWithPopup(auth, provider);
+    navigate("/");
+  };
+
   const schema = yup.object().shape({
-    email: yup.string().email().required('Email field is required'),
+    email: yup.string().email().required("Email field is required"),
     Password: yup
       .string()
       .min(8)
       .max(20)
-      .required('Passwords can contain symbols, letters, or numbers'),
+      .required("Passwords can contain symbols, letters, or numbers"),
   });
 
   const {
@@ -38,7 +48,7 @@ const LoginForm = () => {
   };
 
   const [showPassword, setShowPassword] = useState(false);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
 
   const handlePasswordToggle = () => {
     setShowPassword(!showPassword);
@@ -49,15 +59,15 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white shadow-md p-8 rounded-lg w-full max-w-md">
+    <div className="h-screen flex items-center justify-center font-[Calibri] bg-[#0d1224]">
+      <div className=" bg-white  shadow-md p-8 rounded-lg w-full max-w-md">
         <div className="imageStyle text-center">
           <img
             alt="ddd"
             src={backgroundImage}
             className="w-20 h-20 rounded-full mx-auto mb-4"
           />
-          <h2 className="text-2xl font-semibold">Carsons</h2>
+          <h2 className="text-2xl font-extrabold font-serif">CARSONS</h2>
           <p className="carsons-login-p">
             Please sign in to continue... We've got you covered.
           </p>
@@ -123,7 +133,7 @@ const LoginForm = () => {
               Sign In With Phone Number
             </button>
           </div> */}
-          {/* <br /> */}
+          <br />
           <div className="w-full gap-3 flex cursor-pointer bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
             <div className="mt-3 ml-2">
               <AiOutlineMail />
@@ -141,7 +151,10 @@ const LoginForm = () => {
             <div className="mt-3 ml-2">
               <FcGoogle />
             </div>
-            <button className=" text-white py-2 rounded tracking-wide font-semibold">
+            <button
+              className=" text-white py-2 rounded tracking-wide font-semibold"
+              onClick={signInWithGoogle}
+            >
               Sign in with Google
             </button>
           </div>
