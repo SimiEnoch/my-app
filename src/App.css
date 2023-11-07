@@ -1,4 +1,10 @@
-/* This contains the loader and other css*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* This contains the loader and other css*/
 .loader {
   animation: rotate 2s infinite;
   height: 50px;
@@ -120,4 +126,184 @@
 .user img {
   font-size: 15px;
   border-radius: 50%;
+}
+
+.homestyle {
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.overlay-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.overlay-message-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.icon {
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 15px;
+}
+.icon,
+.icon_header {
+  margin-right: 5px;
+}
+.container {
+  display: flex;
+}
+
+.products {
+  flex: 1;
+  height: 500px; /* Set the desired height for the product component */
+  overflow-y: auto;
+}
+
+.sidebar {
+  flex-shrink: 0;
+  width: 300px; /* Set the width of the sidebar */
+}
+
+.close_icon {
+  color: red;
+  margin-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.tick-icon {
+  margin-top: 1px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 230px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas:
+    'sidebar header header header'
+    'sidebar main main main';
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 30px;
+  box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+}
+
+.menu-icon {
+  display: none;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  height: 100vh;
+  text-align: start;
+  background-color: white;
+  flex: 0 0 235px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px 0px 30px;
+  margin-bottom: 30px;
+}
+.sidebar-title > span {
+  display: none;
+}
+.sidebar-brand {
+  margin-top: 15px;
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  padding: 0;
+  list-style-type: none;
+  
+}
+.sidebar-list-item {
+  padding: 1px 10px 7px 15px;
+  font-size: 17px;
+}
+
+.sidebar-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.sidebar-responsive {
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
+}
+
+.main-container {
+  grid-area: main;
+  padding: 20px 20px;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-card {
+  display: grid;
+  gap: 25px;
+  margin: 15px 0;
+}
+
+/*  */
+
+.tabs {
+  transition: transform 0.3 ease;
+}
+.tabs:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: 'header' 'main';
+  }
+  #sidebar {
+    display: none;
+  }
+  .menu-icon {
+    display: inline;
+  }
+  .sidebar-title > span {
+    display: inline;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardMobile {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .flex-mobile {
+    display: block;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+  }
 }

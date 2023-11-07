@@ -14,10 +14,22 @@ import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const navigate = useNavigate();
 
+  const [loginWithEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
   const signInWithGoogle = async () => {
     const result = await signInWithPopup(auth, provider);
     navigate("/");
   };
+
+  const login = async () => {};
+
+  const logOut = async () => {};
+
+  // const signInWithEmailAndPassword = () => {
+  //   const answer = await signInWithEmailAndPassword(email, password);
+
+  // }
 
   const schema = yup.object().shape({
     email: yup.string().email().required("Email field is required"),
@@ -53,14 +65,14 @@ const LoginForm = () => {
   const handlePasswordToggle = () => {
     setShowPassword(!showPassword);
   };
-
+  
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
 
   return (
-    <div className="h-screen flex items-center justify-center font-[Calibri] bg-[#0d1224]">
-      <div className=" bg-white  shadow-md p-8 rounded-lg w-full max-w-md">
+    <div className="h-screen flex items-center justify-center font-[Calibri] bg-[#DAA520]">
+      <div className=" bg-white  shadow-md p-6 rounded-lg w-full max-w-lg">
         <div className="imageStyle text-center">
           <img
             alt="ddd"
@@ -74,7 +86,7 @@ const LoginForm = () => {
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="">
-          {/* <div className="mb-4">
+          <div className="mb-4">
             <label
               htmlFor="email"
               className="block text-gray-600 text-sm font-semibold mb-2"
@@ -85,11 +97,10 @@ const LoginForm = () => {
               type="text"
               className="w-full px-3 py-2 border rounded border-gray-300 focus:outline-none focus:border-blue-500"
               placeholder="Email..."
-              {...register('email')}
+              {...register("email")}
+              onChange={(event) => setLoginEmail(event.target.value)}
             />
-            <p className="text-red-500 text-xs mt-1">
-              {errors.email?.message}
-            </p>
+            <p className="text-red-500 text-xs mt-1">{errors.email?.message}</p>
           </div>
 
           <div className="mb-4">
@@ -100,48 +111,34 @@ const LoginForm = () => {
               Password
             </label>
             <input
-              type={showPassword ? 'text' : 'password'}
+              type={showPassword ? "text" : "password"}
               id="password"
               className="w-full px-3 py-2 border rounded border-gray-300 focus:outline-none focus:border-blue-500"
               placeholder="Password..."
               value={password}
-              {...register('Password')}
-              onChange={handlePasswordChange}
+              {...register("Password")}
+              onChange={(event) => setLoginPassword(event.target.value)}
             />
             <p className="text-red-500 text-xs mt-1">
               {errors.Password?.message}
             </p>
-            <div className="tick-button-div">
+            <div className="tick-button-div flex gap-1">
               <button
                 type="button"
-                className={`show-password-btn ${
-                  showPassword ? '' : 'active'
-                }`}
+                className={`show-password-btn ${showPassword ? "" : "active"}`}
                 onClick={handlePasswordToggle}
               >
                 <FaCheck className="tick-icon" />
               </button>
-              {showPassword ? 'Hide Password' : 'Show Password'}
+              <p className="mt-1 ">
+                {showPassword ? "Hide Password" : "Show Password"}
+              </p>
             </div>
-          </div> */}
-
-          {/* <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
-            Submit
-          </button> */}
-          {/* <div>
-            <button className="w-full bg-gray-500 text-white py-2 rounded hover:bg-blue-600">
-              Sign In With Phone Number
-            </button>
-          </div> */}
-          <br />
-          <div className="w-full gap-3 flex cursor-pointer bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
-            <div className="mt-3 ml-2">
-              <AiOutlineMail />
-            </div>
-            <button className="   tracking-wide text-white py-2 rounded font-semibold">
-              Continue with email Account
-            </button>
           </div>
+
+          <button className="w-full font-[Calibri] text-lg font-extrabold bg-blue-500 text-white py-4 rounded hover:bg-blue-600">
+            Submit
+          </button>
 
           <div className="or-line my-4">
             <span className="or-line-text">Or</span>

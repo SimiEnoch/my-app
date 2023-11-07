@@ -8,7 +8,7 @@ export const Footer = () => {
   }, []);
   return (
     <div
-      className="md:h-[72vh] bg-slate-800 h-[100%] mt-36"
+      className="md:h-[72vh] bg-[#DAA520] h-[100%] mt-36"
       id="about"
     >
       <h1

@@ -69,7 +69,7 @@ const CartContainer = ({ cartContainer }) => {
                   (accumulator, currentValue) =>
                     accumulator + currentValue,
                   0
-                )}
+                ).toLocaleString()}
             </span>
           </h4>
         </div>

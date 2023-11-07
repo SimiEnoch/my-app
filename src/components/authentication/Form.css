@@ -120,6 +120,7 @@ label {
 
 .show-password-btn {
   border: none;
+  margin-top: 1px;
   background-color: #4caf50;
   cursor: pointer;
   background-color: black;
@@ -144,8 +145,10 @@ label {
 }
 .tick-icon {
   color: #4caf50;
+  margin-top: 3px;
   font-size: 20px;
 }
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;

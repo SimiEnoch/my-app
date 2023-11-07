@@ -70,7 +70,7 @@ export const Cart = ({
   };
 
   return (
-    <article className=" flex sm:border-[1px] w-[100%] justify-around sm:px-1">
+    <article className=" flex  w-[100%] border-[1px] justify-around sm:px-1">
       <img
         src={image}
         alt={name}
@@ -78,16 +78,16 @@ export const Cart = ({
       />
       <div className="">
         <header className="mt-3">
-          <h4 className="text-lg font-bold flex align-center justify-center text-center font">
+          <h4 className="text-lg font-serif font-bold flex align-center justify-center text-center font">
             {name}
           </h4>
           <div className="w-full flex align-center justify-center font-bold gap-2">
-            <h4 className="text-sm  bg-slate-500 text-white border-2 mb-3 p-1 rounded mt-1">
+            <h4 className="text-sm   text-black  mb-3 p-1 rounded mt-1">
               ${price}
             </h4>
-            <h4 className="text-[15px] text-black mb-3 p-1 rounded mt-1 line-through">
+            {/* <h4 className="text-[15px] text-black mb-3 p-1 rounded mt-1 line-through">
               ${oldPrice}
-            </h4>
+            </h4> */}
           </div>
         </header>
         <span className="w-full">
