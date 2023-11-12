@@ -12,10 +12,10 @@ const CartContainer = ({ cartContainer }) => {
   if (cart.length === 0) {
     return (
       <section className="">
-        <header className="max-w-screen-xl fixed flex z-10 top-0 w-full shadow items-center justify-between bg-slate-950 text-white h-[60px] md:px-16 px-8">
+        <header className="fixed flex z-10 top-0 w-full shadow items-center justify-between bg-[#DAA520] text-white h-[60px] md:px-16 px-8">
           <h1 className="text-xl font-bold">CARSONS</h1>
           <div className="hover:text-yellow-500">
-            <li className="text-slate-800 duration-500  hover:text-yellow-500 mb-4 md:order-5 order-none relative">
+            <li className="text-white duration-500  hover:text-yellow-500 mb-4 md:order-5 order-none relative">
               <a href="/Cart">
                 <BsFillCartCheckFill />
                 <div className="object-top left-[8px]  absolute  p-[1px] top-[11px]  rounded-xl">

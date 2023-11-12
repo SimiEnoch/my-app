@@ -70,7 +70,7 @@ export const Cart = ({
   };
 
   return (
-    <article className=" flex  w-[100%] border-[1px] justify-around sm:px-1">
+    <article className=" flex  w-[100%]  justify-around sm:px-1">
       <img
         src={image}
         alt={name}
@@ -78,7 +78,7 @@ export const Cart = ({
       />
       <div className="">
         <header className="mt-3">
-          <h4 className="text-lg font-serif font-bold flex align-center justify-center text-center font">
+          <h4 className="text-lg  font-bold flex align-center justify-center text-center font">
             {name}
           </h4>
           <div className="w-full flex align-center justify-center font-bold gap-2">
@@ -94,7 +94,7 @@ export const Cart = ({
           <div className="flex align-center justify-center font-bold">
             <BsFillTrash3Fill className="text-red-700 text-[11px]" />
             <button
-              className="text-[11px] mb-3 rounded hover:scale-95 text-red-500"
+              className="text-[11px] rounded hover:scale-95 text-red-500"
               onClick={() => {
                 console.log(mainId);
                 remove();

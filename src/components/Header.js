@@ -71,7 +71,7 @@ function Header() {
         </div>
       )}
 
-      {user ? (
+      {/* {user ? (
         <button className="text-slate-800 duration-500" onClick={logOut}>
           <Link to="">
             <button className="bg-green-800 p-1 px-2 rounded-md text-white font-bold">
@@ -88,7 +88,7 @@ function Header() {
           </Link>
         </button>
       )}
-      
+       */}
       <div className="md:hidden block ">
         <button
           onClick={buttonHandler}
